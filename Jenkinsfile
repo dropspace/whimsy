@@ -39,12 +39,12 @@ pipeline {
     }
     stage('Static Analysis') {
       steps {
-        sh 'mvn findbugs:findbugs'
+        sh 'ls -l'
       }
     }
     stage('Deploy') {
       steps {
-        sh 'mvn source:jar package -Dmaven.test.skip'
+        sh 'ls -lh'
       }
     }
   }
