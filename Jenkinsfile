@@ -51,12 +51,4 @@ pipeline {
   environment {
     DEBUG = 'true'
   }
-  post {
-    always {
-      junit '**/target/surefire-reports/TEST-*.xml'
-      archive '**/target/*.jar'
-      
-    }
-    
-  }
 }
