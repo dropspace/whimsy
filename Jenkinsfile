@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'maven'
-    }
-    
-  }
+  agent any
   stages {
     stage('Build') {
       steps {
@@ -16,22 +11,18 @@ pipeline {
         parallel(
           "Firefox": {
             sh 'echo \'setting up selenium environment\''
-            sh 'ping -c 5 localhost'
             
           },
           "Safari": {
             sh 'echo \'setting up selenium environment\''
-            sh 'ping -c 8 localhost'
             
           },
           "Chrome": {
             sh 'echo \'setting up selenium environment\''
-            sh 'ping -c 3 localhost'
             
           },
           "Internet Explorer": {
             sh 'echo \'setting up selenium environment\''
-            sh 'ping -c 4 localhost'
             
           }
         )
