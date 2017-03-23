@@ -11,6 +11,7 @@ pipeline {
         parallel(
           "Firefox": {
             sh 'echo \'setting up selenium environment\''
+            sleep 2
             
           },
           "Safari": {
@@ -19,6 +20,7 @@ pipeline {
           },
           "Chrome": {
             sh 'echo \'setting up selenium environment\''
+            sleep 3
             
           },
           "Internet Explorer": {
