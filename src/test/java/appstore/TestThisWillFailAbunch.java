@@ -47,6 +47,7 @@ public class TestThisWillFailAbunch {
 
     @Test
     public void aFailingTest5() {
+        System.out.println('hello, world');
         doSomething();
        assertTrue("I expected this to pass!", true);
     }
